@@ -1,0 +1,70 @@
+management:
+  endpoints:
+    web:
+      base-path: /talk2all-app-server.jar
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: ${RUN_LEVEL:dev}
+  servlet:
+    multipart:
+      max-file-size: ${UPLOAD_MAX_FILE_SIZE:10MB}
+      max-request-size: ${UPLOAD_MAX_REQUEST_SIZE:50MB}
+
+logging:
+  include-application-name: false
+  pattern:
+    dateformat: HH:mm:ss.SSS
+    console: "%clr(%d{HH:mm:ss.SSS}){faint} %clr(%5p) %clr(---){faint} %clr([%t]){faint} %clr(%-36.36logger{35}){cyan} %clr(:){faint} %m%n%wEx"
+  file:
+    name: ./logs/test.log
+  logback:
+    rollingpolicy:
+      max-file-size: 50MB
+      max-history: 7
+  level:
+    root: debug
+    jdk: warn
+    sun: warn
+    javax: warn
+    reactor: warn
+    com.sun: warn
+    org.xnio: warn
+    io.netty: warn
+    Validator: warn
+    springfox: warn
+    java.lang: info
+    org.apache: warn
+    com.zaxxer: warn
+    io.swagger: warn
+    org.thymeleaf: warn
+    angus.activation: warn
+    jakarta.mail: warn
+    org.eclipse.angus: warn
+    jakarta.activation: warn
+    org.ehcache: warn
+    org.mybatis: warn
+    io.undertow: warn
+    org.redisson: warn
+    org.hibernate: warn
+    org.postgresql: warn
+    de.codecentric: warn
+    com.alibaba.excel: warn
+    org.mongodb.driver: warn
+    jdk.event.security: warn
+    org.springframework: warn
+    io.undertow.request.security: info
+    _org.springframework.web.servlet: warn
+    org.springframework.data.mongodb.core: info
+    com.zaxxer.hikari.pool.ProxyConnection: error
+    org.springframework.boot.actuate.endpoint: warn

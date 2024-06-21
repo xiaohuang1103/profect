@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="app-require">
+
+    <sql id="dbname">
+        id, type, describe, version, file_url, url, updated_at, package_name, force_update
+    </sql>
+
+    <select id="select" parameterType="map" resultType="com.example.project01.model.Require">
+        SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectAllWithPagination" parameterType="map" resultType="map">
+        SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require
+        <where>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="type != null and type != ''">
+                AND type LIKE concat('%', #{type}, '%')
+            </if>
+            <if test="forceUpdateStartTime != null and forceUpdateEndTime != null">
+                AND updated_at BETWEEN
+                TO_TIMESTAMP(#{forceUpdateStartTime},'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AND
+                TO_TIMESTAMP(#{forceUpdateEndTime},'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"')
+            </if>
+        </where>
+        ORDER BY id
+        LIMIT #{pageSize}
+    </select>
+
+    <delete id="delete" parameterType="Integer">
+        delete from require where id = #{id}
+    </delete>
+
+
+    <update id="update" parameterType="map">
+        UPDATE require SET
+        id = #{id},
+        type =
+        <choose>
+            <when test="type == 'Android'"> 'Android' </when>
+            <when test="type == 'iOS'"> 'iOS' </when>
+            <otherwise> '' </otherwise>
+        </choose>
+        <if test="describe != null and describe != ''"> , describe = #{describe} </if>
+        <if test="version != null and version != ''"> , version = #{version} </if>
+        <if test="fileUrl != null and fileUrl != ''"> , file_url = #{fileUrl} </if>
+        <if test="url != null and url != ''"> , url = #{url} </if>
+        <if test="packageName != null and packageName != ''"> , package_name = #{packageName} </if>
+        <if test="updatedAt != null"> , updated_at = #{updatedAt} </if>
+        <if test="forceUpdate != null"> , force_update = #{forceUpdate} </if>
+        WHERE id = #{id}
+    </update>
+
+    <insert id="insertOrUpdate" parameterType="map" useGeneratedKeys="true">
+        INSERT INTO require (
+            type, describe, version, file_url, url, package_name, updated_at, force_update )
+        VALUES (
+           #{type}, #{describe}, #{version}, #{fileUrl}, #{url}, #{packageName}, #{updatedAt}, #{forceUpdate} )
+        ON CONFLICT (id) DO UPDATE SET
+            type = EXCLUDED.type,
+            describe = EXCLUDED.describe,
+            version = EXCLUDED.version,
+            file_url = EXCLUDED.file_url,
+            url = EXCLUDED.url,
+            package_name = EXCLUDED.package_name,
+            updated_at = EXCLUDED.updated_at,
+            force_update = EXCLUDED.force_update;
+    </insert>
+
+</mapper>

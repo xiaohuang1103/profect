@@ -1,0 +1,203 @@
+08:32:58.355 DEBUG 2004 --- [background-preinit] org.jboss.logging                        : Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+08:32:58.549  INFO 2004 --- [main] c.e.project01.Project01Application       : Starting Project01Application using Java 17.0.11 with PID 2004 (D:\springboot\project01 - 副本\target\classes started by Administrator in D:\springboot\project01 - 副本)
+08:32:58.554 DEBUG 2004 --- [main] c.e.project01.Project01Application       : Running with Spring Boot v3.2.5, Spring v6.1.6
+08:32:58.555  INFO 2004 --- [main] c.e.project01.Project01Application       : The following 1 profile is active: "dev"
+08:33:01.735  WARN 2004 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.project01]' package. Please check your configuration.
+08:33:03.456  INFO 2004 --- [main] c.l.a.RateLimiterAutoConfiguration       : 	===>>	[rate-limiter] 启用SimpleRateLimitChecker限流。
+08:33:05.167  INFO 2004 --- [main] c.l.a.MyBatisCustomizerAutoConfiguration : 	===>>	[Mybatis] 设置BigInteger - Long类型处理.
+08:33:06.522  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[i18n] 启用国际化组件.
+08:33:06.543  INFO 2004 --- [main] c.l.a.SessionAutoConfiguration           : 	===>>	[Session] 启用Caffeine Session Repository, idle: 30分钟
+08:33:07.583  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 初始化spring上下文组件，提供静态访问.
+08:33:07.607  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>		[boot] 启用JSR303校验.
+08:33:07.612  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[IdGenerator] 初始化ID生成器（雪花算法）.
+08:33:07.612  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>		[IdGenerator] 配置: workerId=null, dataCenterId=null
+08:33:07.623  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用全局异常处理.
+08:33:07.635  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 初始化ApiPermit端点.
+08:33:07.642  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 初始化TimingTask端点.
+08:33:07.650  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[SysLog] 启用LoggerQueue. Observer: class com.leon.autoconfigure.CommonsAutoConfiguration$$Lambda$904/0x000002c6c05632a8
+08:33:07.686 DEBUG 2004 --- [main] com.leon.nio.queue.Reader                : 继续读取: D:\springboot\project01 - 副本\8188\sys_log
+08:33:07.688 DEBUG 2004 --- [main] log-queue                                : 		===>>	[SysLog]已启动 sys-log daemon线程
+08:33:07.698  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用@ApiSetting注解.
+08:33:07.701  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用默认EventListener（deprecated）.
+08:33:07.706  INFO 2004 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用EventPublisher.  com.leon.event.DefaultAsyncEventListener
+08:33:08.150  INFO 2004 --- [main] c.e.project01.Project01Application       : Started Project01Application in 11.456 seconds (process running for 13.818)
+08:33:35.877 DEBUG 2004 --- [http-nio-8188-exec-1] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require ORDER BY id LIMIT ?
+08:33:36.105 DEBUG 2004 --- [http-nio-8188-exec-1] app-require.selectAllWithPagination      : ==> Parameters: 10(Integer)
+08:33:36.183 DEBUG 2004 --- [http-nio-8188-exec-1] app-require.selectAllWithPagination      : <==      Total: 7
+08:33:50.766 DEBUG 2004 --- [http-nio-8188-exec-3] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:33:50.769 DEBUG 2004 --- [http-nio-8188-exec-3] app-require.select                       : ==> Parameters: 36(Integer)
+08:33:50.771 DEBUG 2004 --- [http-nio-8188-exec-3] app-require.select                       : <==      Total: 0
+08:33:57.296 DEBUG 2004 --- [http-nio-8188-exec-4] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:33:57.296 DEBUG 2004 --- [http-nio-8188-exec-4] app-require.select                       : ==> Parameters: 33(Integer)
+08:33:57.304 DEBUG 2004 --- [http-nio-8188-exec-4] app-require.select                       : <==      Total: 1
+08:34:02.297 DEBUG 2004 --- [http-nio-8188-exec-5] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE type LIKE concat('%', ?, '%') ORDER BY id LIMIT ?
+08:34:02.308 DEBUG 2004 --- [http-nio-8188-exec-5] app-require.selectAllWithPagination      : ==> Parameters: %iOS%(String), 10(Integer)
+08:34:02.317 DEBUG 2004 --- [http-nio-8188-exec-5] app-require.selectAllWithPagination      : <==      Total: 4
+08:34:15.083 DEBUG 2004 --- [http-nio-8188-exec-6] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE type LIKE concat('%', ?, '%') AND updated_at BETWEEN TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AND TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') ORDER BY id LIMIT ?
+08:34:15.083 DEBUG 2004 --- [http-nio-8188-exec-6] app-require.selectAllWithPagination      : ==> Parameters: %iOS%(String), 2024-06-12(String), 2024-06-14(String), 10(Integer)
+08:34:15.088 DEBUG 2004 --- [http-nio-8188-exec-6] app-require.selectAllWithPagination      : <==      Total: 1
+08:34:20.869 DEBUG 2004 --- [http-nio-8188-exec-7] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE updated_at BETWEEN TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AND TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') ORDER BY id LIMIT ?
+08:34:20.871 DEBUG 2004 --- [http-nio-8188-exec-7] app-require.selectAllWithPagination      : ==> Parameters: 2024-06-12(String), 2024-06-14(String), 10(Integer)
+08:34:20.881 DEBUG 2004 --- [http-nio-8188-exec-7] app-require.selectAllWithPagination      : <==      Total: 4
+08:34:50.610 DEBUG 2004 --- [http-nio-8188-exec-9] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:34:50.612 DEBUG 2004 --- [http-nio-8188-exec-9] app-require.select                       : ==> Parameters: 33(Integer)
+08:34:50.614 DEBUG 2004 --- [http-nio-8188-exec-9] app-require.select                       : <==      Total: 1
+08:34:50.616 DEBUG 2004 --- [http-nio-8188-exec-9] app-require.delete                       : ==>  Preparing: delete from require where id = ?
+08:34:50.619 DEBUG 2004 --- [http-nio-8188-exec-9] app-require.delete                       : ==> Parameters: 33(Integer)
+08:34:50.631 DEBUG 2004 --- [http-nio-8188-exec-9] app-require.delete                       : <==    Updates: 1
+08:34:53.842 DEBUG 2004 --- [http-nio-8188-exec-10] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:34:53.842 DEBUG 2004 --- [http-nio-8188-exec-10] app-require.select                       : ==> Parameters: 33(Integer)
+08:34:53.842 DEBUG 2004 --- [http-nio-8188-exec-10] app-require.select                       : <==      Total: 0
+08:35:23.985 DEBUG 2004 --- [http-nio-8188-exec-11] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:35:23.989 DEBUG 2004 --- [http-nio-8188-exec-11] app-require.select                       : ==> Parameters: 35(Integer)
+08:35:23.990 DEBUG 2004 --- [http-nio-8188-exec-11] app-require.select                       : <==      Total: 0
+08:35:31.542 DEBUG 2004 --- [http-nio-8188-exec-12] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:35:31.542 DEBUG 2004 --- [http-nio-8188-exec-12] app-require.select                       : ==> Parameters: 33(Integer)
+08:35:31.543 DEBUG 2004 --- [http-nio-8188-exec-12] app-require.select                       : <==      Total: 0
+08:36:04.922 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:36:04.924 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.select                       : ==> Parameters: 17(Integer)
+08:36:04.928 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.select                       : <==      Total: 1
+08:36:04.930  INFO 2004 --- [http-nio-8188-exec-13] com.example.project01.api.RequireApi     : Processing Android type
+08:36:04.931 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:36:04.932 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.select                       : ==> Parameters: 17(Integer)
+08:36:04.933 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.select                       : <==      Total: 1
+08:36:04.945 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = 'Android' , describe = ? , version = ? , file_url = ? , url = ? , package_name = ? , updated_at = ? , force_update = ? WHERE id = ?
+08:36:04.947 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.update                       : ==> Parameters: 17(Integer), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), examle_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean), 17(Integer)
+08:36:04.951 DEBUG 2004 --- [http-nio-8188-exec-13] app-require.update                       : <==    Updates: 1
+08:36:53.599 ERROR 2004 --- [http-nio-8188-exec-14] com.leon.web.ApiExceptionHandler         : /app/require/xg 400 - class org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+08:37:10.230 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:37:10.233 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.select                       : ==> Parameters: 17(Integer)
+08:37:10.235 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.select                       : <==      Total: 1
+08:37:10.236  WARN 2004 --- [http-nio-8188-exec-16] com.example.project01.api.RequireApi     : Unknown type: null
+08:37:10.236 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:37:10.238 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.select                       : ==> Parameters: 17(Integer)
+08:37:10.241 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.select                       : <==      Total: 1
+08:37:10.245 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = '' , file_url = ? , updated_at = ? WHERE id = ?
+08:37:10.246 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.update                       : ==> Parameters: 17(Integer), file_url(String), 2024-06-12 11:16:19.0(Timestamp), 17(Integer)
+08:37:10.251 DEBUG 2004 --- [http-nio-8188-exec-16] app-require.update                       : <==    Updates: 1
+08:37:46.746 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:37:46.746 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.select                       : ==> Parameters: 17(Integer)
+08:37:46.746 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.select                       : <==      Total: 1
+08:37:46.746 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:37:46.746 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.select                       : ==> Parameters: 17(Integer)
+08:37:46.756 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.select                       : <==      Total: 1
+08:37:46.758 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = '' , file_url = ? , updated_at = ? WHERE id = ?
+08:37:46.758 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.update                       : ==> Parameters: 17(Integer), file_url(String), 2024-06-12 11:16:19.0(Timestamp), 17(Integer)
+08:37:46.765 DEBUG 2004 --- [http-nio-8188-exec-17] app-require.update                       : <==    Updates: 1
+08:37:55.237 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:37:55.238 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.select                       : ==> Parameters: 17(Integer)
+08:37:55.241 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.select                       : <==      Total: 1
+08:37:55.241 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+08:37:55.242 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.select                       : ==> Parameters: 17(Integer)
+08:37:55.245 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.select                       : <==      Total: 1
+08:37:55.247 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = 'Android' , describe = ? , version = ? , file_url = ? , url = ? , package_name = ? , updated_at = ? , force_update = ? WHERE id = ?
+08:37:55.248 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.update                       : ==> Parameters: 17(Integer), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), examle_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean), 17(Integer)
+08:37:55.250 DEBUG 2004 --- [http-nio-8188-exec-18] app-require.update                       : <==    Updates: 1
+08:38:10.565 DEBUG 2004 --- [http-nio-8188-exec-19] app-require.insertOrUpdate               : ==>  Preparing: INSERT INTO require ( type, describe, version, file_url, url, package_name, updated_at, force_update ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? ) ON CONFLICT (id) DO UPDATE SET type = EXCLUDED.type, describe = EXCLUDED.describe, version = EXCLUDED.version, file_url = EXCLUDED.file_url, url = EXCLUDED.url, package_name = EXCLUDED.package_name, updated_at = EXCLUDED.updated_at, force_update = EXCLUDED.force_update;
+08:38:10.567 DEBUG 2004 --- [http-nio-8188-exec-19] app-require.insertOrUpdate               : ==> Parameters: Android(String), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), examle_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean)
+08:38:10.634 DEBUG 2004 --- [http-nio-8188-exec-19] app-require.insertOrUpdate               : <==    Updates: 1
+08:38:10.635  INFO 2004 --- [http-nio-8188-exec-19] c.e.project01.service.RequireService     : Require inserted successfully
+08:57:27.046 DEBUG 2004 --- [Thread-2] com.leon.nio.queue.FileQueue             : 队列停止，清理资源 D:\springboot\project01 - 副本\8188\sys_log
+09:35:29.155 DEBUG 5780 --- [background-preinit] org.jboss.logging                        : Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+09:35:29.284  INFO 5780 --- [main] c.e.project01.Project01Application       : Starting Project01Application using Java 17.0.11 with PID 5780 (D:\springboot\project01 - 副本\target\classes started by Administrator in D:\springboot\project01 - 副本)
+09:35:29.284 DEBUG 5780 --- [main] c.e.project01.Project01Application       : Running with Spring Boot v3.2.5, Spring v6.1.6
+09:35:29.299  INFO 5780 --- [main] c.e.project01.Project01Application       : The following 1 profile is active: "dev"
+09:35:31.866  WARN 5780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.project01]' package. Please check your configuration.
+09:35:32.897  INFO 5780 --- [main] c.l.a.RateLimiterAutoConfiguration       : 	===>>	[rate-limiter] 启用SimpleRateLimitChecker限流。
+09:35:35.172  INFO 5780 --- [main] c.l.a.MyBatisCustomizerAutoConfiguration : 	===>>	[Mybatis] 设置BigInteger - Long类型处理.
+09:35:36.406  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[i18n] 启用国际化组件.
+09:35:36.426  INFO 5780 --- [main] c.l.a.SessionAutoConfiguration           : 	===>>	[Session] 启用Caffeine Session Repository, idle: 30分钟
+09:35:37.493  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 初始化spring上下文组件，提供静态访问.
+09:35:37.496  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>		[boot] 启用JSR303校验.
+09:35:37.544  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[IdGenerator] 初始化ID生成器（雪花算法）.
+09:35:37.544  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>		[IdGenerator] 配置: workerId=null, dataCenterId=null
+09:35:37.554  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用全局异常处理.
+09:35:37.557  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 初始化ApiPermit端点.
+09:35:37.563  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 初始化TimingTask端点.
+09:35:37.570  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[SysLog] 启用LoggerQueue. Observer: class com.leon.autoconfigure.CommonsAutoConfiguration$$Lambda$902/0x000002529c544000
+09:35:37.640 DEBUG 5780 --- [main] com.leon.nio.queue.Reader                : 继续读取: D:\springboot\project01 - 副本\8188\sys_log
+09:35:37.647 DEBUG 5780 --- [main] log-queue                                : 		===>>	[SysLog]已启动 sys-log daemon线程
+09:35:37.652  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用@ApiSetting注解.
+09:35:37.655  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用默认EventListener（deprecated）.
+09:35:37.701  INFO 5780 --- [main] c.l.a.CommonsAutoConfiguration           : 	===>>	[boot] 启用EventPublisher.  com.leon.event.DefaultAsyncEventListener
+09:35:38.155  INFO 5780 --- [main] c.e.project01.Project01Application       : Started Project01Application in 10.282 seconds (process running for 13.761)
+09:36:00.296 DEBUG 5780 --- [http-nio-8188-exec-4] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:36:00.338 DEBUG 5780 --- [http-nio-8188-exec-4] app-require.select                       : ==> Parameters: 33(Integer)
+09:36:00.376 DEBUG 5780 --- [http-nio-8188-exec-4] app-require.select                       : <==      Total: 0
+09:36:08.964 DEBUG 5780 --- [http-nio-8188-exec-5] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:36:08.969 DEBUG 5780 --- [http-nio-8188-exec-5] app-require.select                       : ==> Parameters: 3(Integer)
+09:36:09.024 DEBUG 5780 --- [http-nio-8188-exec-5] app-require.select                       : <==      Total: 1
+09:36:13.987 DEBUG 5780 --- [http-nio-8188-exec-6] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require ORDER BY id LIMIT ?
+09:36:13.987 DEBUG 5780 --- [http-nio-8188-exec-6] app-require.selectAllWithPagination      : ==> Parameters: 10(Integer)
+09:36:14.013 DEBUG 5780 --- [http-nio-8188-exec-6] app-require.selectAllWithPagination      : <==      Total: 7
+09:36:20.761 DEBUG 5780 --- [http-nio-8188-exec-7] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE type LIKE concat('%', ?, '%') ORDER BY id LIMIT ?
+09:36:20.761 DEBUG 5780 --- [http-nio-8188-exec-7] app-require.selectAllWithPagination      : ==> Parameters: %iOS%(String), 10(Integer)
+09:36:20.770 DEBUG 5780 --- [http-nio-8188-exec-7] app-require.selectAllWithPagination      : <==      Total: 3
+09:36:28.149 DEBUG 5780 --- [http-nio-8188-exec-8] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE type LIKE concat('%', ?, '%') AND updated_at BETWEEN TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AND TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') ORDER BY id LIMIT ?
+09:36:28.150 DEBUG 5780 --- [http-nio-8188-exec-8] app-require.selectAllWithPagination      : ==> Parameters: %iOS%(String), 2024-06-12(String), 2024-06-14(String), 10(Integer)
+09:36:28.155 DEBUG 5780 --- [http-nio-8188-exec-8] app-require.selectAllWithPagination      : <==      Total: 1
+09:36:37.867 DEBUG 5780 --- [http-nio-8188-exec-9] app-require.selectAllWithPagination      : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE updated_at BETWEEN TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AND TO_TIMESTAMP(?,'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') ORDER BY id LIMIT ?
+09:36:37.867 DEBUG 5780 --- [http-nio-8188-exec-9] app-require.selectAllWithPagination      : ==> Parameters: 2024-06-12(String), 2024-06-14(String), 10(Integer)
+09:36:37.872 DEBUG 5780 --- [http-nio-8188-exec-9] app-require.selectAllWithPagination      : <==      Total: 5
+09:37:03.875 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:37:03.875 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.select                       : ==> Parameters: 17(Integer)
+09:37:03.884 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.select                       : <==      Total: 1
+09:37:03.897  INFO 5780 --- [http-nio-8188-exec-11] com.example.project01.api.RequireApi     : Processing Android type
+09:37:03.897 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:37:03.897 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.select                       : ==> Parameters: 17(Integer)
+09:37:03.906 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.select                       : <==      Total: 1
+09:37:03.919 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = 'Android' , describe = ? , version = ? , file_url = ? , url = ? , package_name = ? , updated_at = ? , force_update = ? WHERE id = ?
+09:37:03.919 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.update                       : ==> Parameters: 17(Integer), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), examle_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean), 17(Integer)
+09:37:03.928 DEBUG 5780 --- [http-nio-8188-exec-11] app-require.update                       : <==    Updates: 1
+09:37:45.583 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:37:45.588 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.select                       : ==> Parameters: 17(Integer)
+09:37:45.591 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.select                       : <==      Total: 1
+09:37:45.592  INFO 5780 --- [http-nio-8188-exec-12] com.example.project01.api.RequireApi     : Processing Android type
+09:37:45.594 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:37:45.594 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.select                       : ==> Parameters: 17(Integer)
+09:37:45.598 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.select                       : <==      Total: 1
+09:37:45.600 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = 'Android' , describe = ? , version = ? , file_url = ? , url = ? , package_name = ? , updated_at = ? , force_update = ? WHERE id = ?
+09:37:45.603 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.update                       : ==> Parameters: 17(Integer), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), exam_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean), 17(Integer)
+09:37:45.613 DEBUG 5780 --- [http-nio-8188-exec-12] app-require.update                       : <==    Updates: 1
+09:38:13.292 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:38:13.293 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.select                       : ==> Parameters: 17(Integer)
+09:38:13.294 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.select                       : <==      Total: 1
+09:38:13.295  INFO 5780 --- [http-nio-8188-exec-13] com.example.project01.api.RequireApi     : Processing Android type
+09:38:13.296 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:38:13.297 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.select                       : ==> Parameters: 17(Integer)
+09:38:13.299 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.select                       : <==      Total: 1
+09:38:13.303 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = 'Android' , describe = ? , version = ? , file_url = ? , url = ? , package_name = ? , updated_at = ? , force_update = ? WHERE id = ?
+09:38:13.304 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.update                       : ==> Parameters: 17(Integer), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), exa_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean), 17(Integer)
+09:38:13.310 DEBUG 5780 --- [http-nio-8188-exec-13] app-require.update                       : <==    Updates: 1
+09:38:33.404 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:38:33.406 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.select                       : ==> Parameters: 17(Integer)
+09:38:33.408 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.select                       : <==      Total: 1
+09:38:33.411 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:38:33.411 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.select                       : ==> Parameters: 17(Integer)
+09:38:33.411 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.select                       : <==      Total: 1
+09:38:33.415 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.update                       : ==>  Preparing: UPDATE require SET id = ?, type = 'Android' , describe = ? , version = ? , file_url = ? , url = ? , package_name = ? , updated_at = ? , force_update = ? WHERE id = ?
+09:38:33.415 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.update                       : ==> Parameters: 17(Integer), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), exa_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean), 17(Integer)
+09:38:33.420 DEBUG 5780 --- [http-nio-8188-exec-15] app-require.update                       : <==    Updates: 1
+09:38:40.782 DEBUG 5780 --- [http-nio-8188-exec-16] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:38:40.783 DEBUG 5780 --- [http-nio-8188-exec-16] app-require.select                       : ==> Parameters: 1(Integer)
+09:38:40.784 DEBUG 5780 --- [http-nio-8188-exec-16] app-require.select                       : <==      Total: 0
+09:38:40.797 DEBUG 5780 --- [http-nio-8188-exec-16] app-require.insertOrUpdate               : ==>  Preparing: INSERT INTO require ( type, describe, version, file_url, url, package_name, updated_at, force_update ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? ) ON CONFLICT (id) DO UPDATE SET type = EXCLUDED.type, describe = EXCLUDED.describe, version = EXCLUDED.version, file_url = EXCLUDED.file_url, url = EXCLUDED.url, package_name = EXCLUDED.package_name, updated_at = EXCLUDED.updated_at, force_update = EXCLUDED.force_update;
+09:38:40.799 DEBUG 5780 --- [http-nio-8188-exec-16] app-require.insertOrUpdate               : ==> Parameters: Android(String), 使用的安卓(String), 2.0(String), fi_url(String), examl_url(String), exa_ackage(String), 2024-06-12 11:16:19.0(Timestamp), true(Boolean)
+09:38:40.809 DEBUG 5780 --- [http-nio-8188-exec-16] app-require.insertOrUpdate               : <==    Updates: 1
+09:38:40.811  INFO 5780 --- [http-nio-8188-exec-16] c.e.project01.service.RequireService     : Require inserted successfully
+09:39:28.475 DEBUG 5780 --- [http-nio-8188-exec-17] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:39:28.476 DEBUG 5780 --- [http-nio-8188-exec-17] app-require.select                       : ==> Parameters: 71(Integer)
+09:39:28.479 DEBUG 5780 --- [http-nio-8188-exec-17] app-require.select                       : <==      Total: 1
+09:39:28.479 DEBUG 5780 --- [http-nio-8188-exec-17] app-require.delete                       : ==>  Preparing: delete from require where id = ?
+09:39:28.479 DEBUG 5780 --- [http-nio-8188-exec-17] app-require.delete                       : ==> Parameters: 71(Integer)
+09:39:28.490 DEBUG 5780 --- [http-nio-8188-exec-17] app-require.delete                       : <==    Updates: 1
+09:39:30.510 DEBUG 5780 --- [http-nio-8188-exec-18] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:39:30.510 DEBUG 5780 --- [http-nio-8188-exec-18] app-require.select                       : ==> Parameters: 71(Integer)
+09:39:30.512 DEBUG 5780 --- [http-nio-8188-exec-18] app-require.select                       : <==      Total: 0
+09:39:35.131 DEBUG 5780 --- [http-nio-8188-exec-19] app-require.select                       : ==>  Preparing: SELECT id, type, describe, version, file_url, url, updated_at, package_name, force_update FROM require WHERE id = ?
+09:39:35.131 DEBUG 5780 --- [http-nio-8188-exec-19] app-require.select                       : ==> Parameters: 72(Integer)
+09:39:35.138 DEBUG 5780 --- [http-nio-8188-exec-19] app-require.select                       : <==      Total: 1
+09:39:35.140 DEBUG 5780 --- [http-nio-8188-exec-19] app-require.delete                       : ==>  Preparing: delete from require where id = ?
+09:39:35.140 DEBUG 5780 --- [http-nio-8188-exec-19] app-require.delete                       : ==> Parameters: 72(Integer)
+09:39:35.146 DEBUG 5780 --- [http-nio-8188-exec-19] app-require.delete                       : <==    Updates: 1
+09:43:09.697 DEBUG 5780 --- [Thread-2] com.leon.nio.queue.FileQueue             : 队列停止，清理资源 D:\springboot\project01 - 副本\8188\sys_log

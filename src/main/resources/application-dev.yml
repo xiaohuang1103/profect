@@ -1,0 +1,26 @@
+server:
+  port: 8188
+  tomcat:
+    accept-count: 50 # 最大等待队列长度
+    threads:
+      max: 300 #最大线程数
+      min-spare: 50 #最小线程数
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/dbname?currentSchema=public&useUnicode=true&characterEncoding=utf8&useSSL=false&useTimezone=true&serverTimezone=UTC&serverTimezone=Asia/Shanghai&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    username: postgres
+    password: postgres
+    hikari:
+      maximum-pool-size: 8
+      connection-timeout: 30000
+      connection-init-sql: select 1;
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
